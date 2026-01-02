@@ -70,16 +70,10 @@ jobs:
           NEXUS_URL: ${{ env.NEXUS_URL }}
           NEXUS_REPO: ${{ env.NEXUS_REPO }}
           JSON_FILE_NAME: ${{ env.JSON_FILE_NAME }}
-        run: | 
-          python generate-packages.py
-          ls -la
-          cat ${{ env.JSON_FILE_NAME }}
-        working-directory: scripts
+        run: python scripts/generate-packages.py
 
       - name: Migrate Packages
         run: |
-          pwd
-          ls -la
           # Parse the JSON and iterate through packages
           packages=$(jq -c '.packages[]' npm_packages.json)
 
