@@ -53,8 +53,10 @@ jobs:
 
       - name: Migrate Packages
         run: |
+          pwd
+          ls -la
           # Parse the JSON and iterate through packages
-          packages=$(jq -c '.packages[]' packages.json)
+          packages=$(jq -c '.packages[]' npm_packages.json)
 
           for pkg in $packages; do
             NPM_NAME=$(echo $pkg | jq -r '.npm')

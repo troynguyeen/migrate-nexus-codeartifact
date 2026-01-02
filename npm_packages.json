@@ -1,0 +1,238 @@
+{
+    "packages": [
+        {
+            "group": "sympli",
+            "name": "danger-utils",
+            "version": "0.0.1",
+            "npm": "@sympli/danger-utils"
+        },
+        {
+            "group": "sympli",
+            "name": "mfe-infra",
+            "version": "0.0.1",
+            "npm": "@sympli/mfe-infra"
+        },
+        {
+            "group": "sympli-mfe",
+            "name": "enums-2-22",
+            "version": "0.0.4",
+            "npm": "@sympli-mfe/enums-2-22"
+        },
+        {
+            "group": "sympli",
+            "name": "mfe-configs",
+            "version": "0.0.3",
+            "npm": "@sympli/mfe-configs"
+        },
+        {
+            "group": "sympli-mfe",
+            "name": "document-forms-framework",
+            "version": "0.0.32",
+            "npm": "@sympli-mfe/document-forms-framework"
+        },
+        {
+            "group": "sympli",
+            "name": "ui-framework",
+            "version": "5.9.10-beta.0",
+            "npm": "@sympli/ui-framework"
+        },
+        {
+            "group": "sympli-mfe",
+            "name": "document-components",
+            "version": "0.0.49",
+            "npm": "@sympli-mfe/document-components"
+        },
+        {
+            "group": "sympli",
+            "name": "ui-logger",
+            "version": "0.0.2-beta.2",
+            "npm": "@sympli/ui-logger"
+        },
+        {
+            "group": "sympli",
+            "name": "http-agent",
+            "version": "0.0.1",
+            "npm": "@sympli/http-agent"
+        },
+        {
+            "group": "sympli-mfe",
+            "name": "enums-shared",
+            "version": "0.0.4",
+            "npm": "@sympli-mfe/enums-shared"
+        },
+        {
+            "group": "sympli-mfe",
+            "name": "enums-2-18",
+            "version": "0.1.0",
+            "npm": "@sympli-mfe/enums-2-18"
+        },
+        {
+            "group": "sympli-mfe",
+            "name": "enums-2-20",
+            "version": "0.1.0",
+            "npm": "@sympli-mfe/enums-2-20"
+        },
+        {
+            "group": "sympli-mfe",
+            "name": "enums-2-23",
+            "version": "0.1.1",
+            "npm": "@sympli-mfe/enums-2-23"
+        },
+        {
+            "group": "sympli",
+            "name": "document-signing-toolkit",
+            "version": "2.0.0",
+            "npm": "@sympli/document-signing-toolkit"
+        },
+        {
+            "group": "sympli",
+            "name": "ui-configs",
+            "version": "0.1.0",
+            "npm": "@sympli/ui-configs"
+        },
+        {
+            "group": "sympli",
+            "name": "mfe-core",
+            "version": "0.0.1",
+            "npm": "@sympli/mfe-core"
+        },
+        {
+            "group": "sympli",
+            "name": "api-gateway",
+            "version": "0.0.1-beta.0",
+            "npm": "@sympli/api-gateway"
+        },
+        {
+            "group": "sympli",
+            "name": "document-scaffolding-toolkit",
+            "version": "1.0.42",
+            "npm": "@sympli/document-scaffolding-toolkit"
+        },
+        {
+            "group": "sympli-mfe",
+            "name": "enums-2-25",
+            "version": "0.0.1",
+            "npm": "@sympli-mfe/enums-2-25"
+        },
+        {
+            "group": "sympli",
+            "name": "digital-signing",
+            "version": "3.0.0-beta.0",
+            "npm": "@sympli/digital-signing"
+        },
+        {
+            "group": "sympli",
+            "name": "webpack-npm-stats",
+            "version": "0.0.2",
+            "npm": "@sympli/webpack-npm-stats"
+        },
+        {
+            "group": "sympli",
+            "name": "formik",
+            "version": "2.2.9-sympli.7",
+            "npm": "@sympli/formik"
+        },
+        {
+            "group": "sympli",
+            "name": "markdown-to-jsx",
+            "version": "7.2.1-sympli.1",
+            "npm": "@sympli/markdown-to-jsx"
+        },
+        {
+            "group": "sympli-mfe",
+            "name": "enums-2-26",
+            "version": "0.0.16",
+            "npm": "@sympli-mfe/enums-2-26"
+        },
+        {
+            "group": "sympli",
+            "name": "yup",
+            "version": "0.31.1-sympli.2",
+            "npm": "@sympli/yup"
+        },
+        {
+            "group": "sympli-mfe",
+            "name": "enums-2-27",
+            "version": "0.0.2",
+            "npm": "@sympli-mfe/enums-2-27"
+        },
+        {
+            "group": "sympli",
+            "name": "ui-build",
+            "version": "0.1.0",
+            "npm": "@sympli/ui-build"
+        },
+        {
+            "group": "sympli-mfe",
+            "name": "enums-2-24",
+            "version": "0.1.4",
+            "npm": "@sympli-mfe/enums-2-24"
+        },
+        {
+            "group": "sympli-mfe",
+            "name": "enums-2-17",
+            "version": "0.2.1",
+            "npm": "@sympli-mfe/enums-2-17"
+        },
+        {
+            "group": "sympli",
+            "name": "dateformat",
+            "version": "5.0.3-sympli.2",
+            "npm": "@sympli/dateformat"
+        },
+        {
+            "group": "sympli-mfe",
+            "name": "enums-2-28",
+            "version": "0.1.2",
+            "npm": "@sympli-mfe/enums-2-28"
+        },
+        {
+            "group": "sympli-mfe",
+            "name": "enums-2-19",
+            "version": "0.1.0",
+            "npm": "@sympli-mfe/enums-2-19"
+        },
+        {
+            "group": "sympli-mfe",
+            "name": "enums-2-21",
+            "version": "0.1.0",
+            "npm": "@sympli-mfe/enums-2-21"
+        },
+        {
+            "group": "sympli",
+            "name": "xmldsigjs",
+            "version": "2.0.22-sympli.1",
+            "npm": "@sympli/xmldsigjs"
+        },
+        {
+            "group": "sympli",
+            "name": "newrelic-publish-sourcemap",
+            "version": "5.1.0-sympli.3",
+            "npm": "@sympli/newrelic-publish-sourcemap"
+        },
+        {
+            "group": "sympli",
+            "name": "winston-splunk-http-transport",
+            "version": "1.0.4-sympli.1",
+            "npm": "@sympli/winston-splunk-http-transport"
+        },
+        {
+            "group": "sympli",
+            "name": "splunk-logging",
+            "version": "0.11.1-sympli.1",
+            "npm": "@sympli/splunk-logging"
+        },
+        {
+            "group": "sympli",
+            "name": "storybook-preset-craco",
+            "version": "7.0.0-sympli.1",
+            "npm": "@sympli/storybook-preset-craco"
+        },
+        {
+            "group": "sympli",
+            "name": "react-scripts",
+            "version": "5.0.1-sympli.1",
+            "npm": "@sympli/react-scripts"
+        }
+    ]
+}
