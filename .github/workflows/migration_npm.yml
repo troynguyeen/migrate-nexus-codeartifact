@@ -8,7 +8,8 @@ on:
 env:
   NODE_VERSION: 22
   PYTHON_VERSION: 3.14
-  NEXUS_URL: "https://nexus.sympli.com.au/repository/npm-private"
+  NEXUS_URL: "https://nexus.sympli.com.au"
+  NEXUS_SOURCE: "https://nexus.sympli.com.au/repository/npm-private/"
   NEXUS_REPO: "nuget-hosted"
   JSON_FILE_NAME: "npm_packages.json"
   AWS_REGION: "ap-southeast-1"
@@ -92,7 +93,7 @@ jobs:
             
             # 2. Pull from Nexus
             # If Nexus needs auth, add --_auth=$(echo -n 'user:pass' | base64) to your .npmrc or command
-            npm pack $NPM_NAME --registry ${{ env.NEXUS_URL }}
+            npm pack $NPM_NAME --registry ${{ env.NEXUS_SOURCE }}
             
             TARBALL=$(ls *.tgz)
             
