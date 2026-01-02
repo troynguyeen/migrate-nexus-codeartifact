@@ -10,7 +10,7 @@ env:
   NUGET_SOURCE: "https://nexus.sympli.com.au/repository/npm-private/"
   AWS_REGION: "ap-southeast-1"
   CODEARTIFACT_DOMAIN: "demo-artifact"
-  CODEARTIFACT_REPO: "npm-repo"
+  CODEARTIFACT_REPO: "npm-migrated"
   AWS_ACCOUNT_ID: "381492178574"
 
 jobs:
