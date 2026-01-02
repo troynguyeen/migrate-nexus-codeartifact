@@ -1,6 +1,9 @@
 name:  🛠️ Migration npm packages
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 env:
   NODE_VERSION: 22
