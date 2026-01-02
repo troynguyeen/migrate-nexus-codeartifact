@@ -7,7 +7,7 @@ on:
 
 env:
   NODE_VERSION: 22
-  NUGET_SOURCE: "https://external-nexus-repository-oos-171563017.ap-southeast-2.elb.amazonaws.com/repository/npm-private/"
+  NUGET_SOURCE: "https://nexus.sympli.com.au/repository/npm-private/"
   AWS_REGION: "ap-southeast-1"
   CODEARTIFACT_DOMAIN: "demo-artifact"
   CODEARTIFACT_REPO: "npm-repo"
@@ -43,9 +43,6 @@ jobs:
           
           # Set the CodeArtifact registry URL
           CODEARTIFACT_URL=$(aws codeartifact get-repository-endpoint --domain ${{ env.CODEARTIFACT_DOMAIN }} --domain-owner ${{ env.AWS_ACCOUNT_ID }} --repository ${{ env.CODEARTIFACT_REPO }} --format npm --query repositoryEndpoint --output text)
-
-          echo "CODEARTIFACT_TOKEN=$CODEARTIFACT_AUTH_TOKEN"
-          echo "CODEARTIFACT_URL=$CODEARTIFACT_URL"
           
           # Export to environment for subsequent steps
           echo "CODEARTIFACT_TOKEN=$CODEARTIFACT_AUTH_TOKEN" >> $GITHUB_ENV
