@@ -8,7 +8,7 @@ on:
 env:
   NODE_VERSION: 22
   PYTHON_VERSION: 3.14
-  NEXUS_URL: "https://nexus.sympli.com.au/repository/npm-private/"
+  NEXUS_URL: "https://nexus.sympli.com.au/repository/npm-private"
   NEXUS_REPO: "nuget-hosted"
   JSON_FILE_NAME: "npm_packages.json"
   AWS_REGION: "ap-southeast-1"
