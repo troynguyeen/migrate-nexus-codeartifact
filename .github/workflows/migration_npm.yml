@@ -1,0 +1,78 @@
+name:  🛠️ Migration npm packages
+on:
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: 22
+  NUGET_SOURCE: https://external-nexus-repository-oos-171563017.ap-southeast-2.elb.amazonaws.com/repository/npm-private/
+  AWS_REGION: ap-southeast-1
+  CODEARTIFACT_DOMAIN: demo-artifact
+  CODEARTIFACT_REPO: npm-repo
+  AWS_ACCOUNT_ID: "381492178574"
+
+jobs:
+  terraform:
+    runs-on: sympli-self-hosted
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      # -------------------------
+      # AWS Authentication
+      # -------------------------
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Authenticate with AWS CodeArtifact
+        id: login-aws
+        run: |
+          # Retrieve the short-lived token from CodeArtifact
+          CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token --domain ${{ env.CODEARTIFACT_DOMAIN }} --domain-owner ${{ env.AWS_ACCOUNT_ID }} --query authorizationToken --output text)
+          
+          # Set the CodeArtifact registry URL
+          CODEARTIFACT_URL=$(aws codeartifact get-repository-endpoint --domain ${{ env.CODEARTIFACT_DOMAIN }} --domain-owner ${{ env.AWS_ACCOUNT_ID }} --repository ${{ env.CODEARTIFACT_REPO }} --format npm --region ${{ env.AWS_REGION }})
+          
+          # Export to environment for subsequent steps
+          echo "CODEARTIFACT_TOKEN=$CODEARTIFACT_AUTH_TOKEN" >> $GITHUB_ENV
+          echo "CODEARTIFACT_URL=$CODEARTIFACT_URL" >> $GITHUB_ENV
+
+      - name: Migrate Packages
+        run: |
+          # Parse the JSON and iterate through packages
+          packages=$(jq -c '.packages[]' packages.json)
+
+          for pkg in $packages; do
+            NPM_NAME=$(echo $pkg | jq -r '.npm')
+            
+            echo "--- Migrating: $NPM_NAME ---"
+            
+            # 1. Create a clean workspace
+            mkdir -p temp_migration && cd temp_migration
+            
+            # 2. Pull from Nexus
+            # If Nexus needs auth, add --_auth=$(echo -n 'user:pass' | base64) to your .npmrc or command
+            npm pack $NPM_NAME --registry ${{ env.NUGET_SOURCE }}
+            
+            TARBALL=$(ls *.tgz)
+            
+            # 3. Configure NPM for CodeArtifact (Scoped to the session)
+            # Removes the https: prefix for the config key
+            CLEAN_URL=${CODEARTIFACT_URL#https://}
+            npm config set //${CLEAN_URL}:_authToken=${CODEARTIFACT_TOKEN}
+            
+            # 4. Publish to CodeArtifact
+            npm publish $TARBALL --registry ${CODEARTIFACT_URL}
+            
+            # 5. Cleanup
+            cd ..
+            rm -rf temp_migration
+          done
