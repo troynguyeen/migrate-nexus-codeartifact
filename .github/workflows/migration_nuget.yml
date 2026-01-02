@@ -1,4 +1,4 @@
-name:  🛠️ Migration npm packages
+name:  🛠️ Migration Nuget packages
 on:
   workflow_dispatch:
   push:
@@ -6,28 +6,28 @@ on:
       - main
 
 env:
-  NODE_VERSION: 22
+  DOTNET_VERSION: 8
   PYTHON_VERSION: 3.14
   NEXUS_URL: "https://nexus.sympli.com.au"
-  NEXUS_SOURCE: "https://nexus.sympli.com.au/repository/npm-private/"
-  NEXUS_REPO: "npm-private"
-  JSON_FILE_NAME: "npm_packages.json"
+  NEXUS_SOURCE: "https://nexus.sympli.com.au/repository/nuget-hosted/"
+  NEXUS_REPO: "nuget-hosted"
+  JSON_FILE_NAME: "nuget_packages.json"
   AWS_REGION: "ap-southeast-1"
   CODEARTIFACT_DOMAIN: "demo-artifact"
-  CODEARTIFACT_REPO: "npm-migrated"
+  CODEARTIFACT_REPO: "nuget-migrated"
   AWS_ACCOUNT_ID: "381492178574"
 
 jobs:
-  migration_npm:
+  migration_nuget:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}
+          dotnet-version: ${{ env.DOTNET_VERSION }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -68,36 +68,38 @@ jobs:
           NEXUS_URL: ${{ env.NEXUS_URL }}
           NEXUS_REPO: ${{ env.NEXUS_REPO }}
           JSON_FILE_NAME: ${{ env.JSON_FILE_NAME }}
-        run: python scripts/generate-packages-npm.py
+        run: python scripts/generate-packages-nuget.py
 
       - name: Migrate Packages
         run: |
-          # Parse the JSON and iterate through packages
-          packages=$(jq -c '.packages[]' ${{ env.JSON_FILE_NAME }})
+          # Loop through the JSON array using jq
+          # We encode to base64 to handle potential spaces or special characters safely in the loop
+          for row in $(jq -r '.packages[] | @base64' ${{ env.JSON_FILE_NAME }}); do
+            _jq() {
+              echo ${row} | base64 --decode | jq -r ${1}
+            }
 
-          for pkg in $packages; do
-            NPM_NAME=$(echo $pkg | jq -r '.npm')
+            REPO_NAME=$(_jq '.repository')
+            PKG_NAME=$(_jq '.name')
+            PKG_VERSION=$(_jq '.version')
+
+            echo "--- Migrating $PKG_NAME ($PKG_VERSION) from $REPO_NAME ---"
+
+            # 1. Construct Nexus Download URL (Standard Nexus NuGet hosted structure)
+            # URL Pattern: [NexusURL]/repository/[RepoName]/[PackageID]/[Version]/[PackageID].[Version].nupkg
+            DOWNLOAD_URL="${{ env.NEXUS_BASE_URL }}/${REPO_NAME}/${PKG_NAME}/${PKG_VERSION}/${PKG_NAME}.${PKG_VERSION}.nupkg"
             
-            echo "--- Migrating: $NPM_NAME ---"
-            
-            # 1. Create a clean workspace
-            mkdir -p temp_migration && cd temp_migration
-            
-            # 2. Pull from Nexus
-            # If Nexus needs auth, add --_auth=$(echo -n 'user:pass' | base64) to your .npmrc or command
-            npm pack $NPM_NAME --registry ${{ env.NEXUS_SOURCE }}
-            
-            TARBALL=$(ls *.tgz)
-            
-            # 3. Configure NPM for CodeArtifact (Scoped to the session)
-            # Removes the https: prefix for the config key
-            CLEAN_URL=${CODEARTIFACT_URL#https://}
-            npm config set //${CLEAN_URL}:_authToken=${CODEARTIFACT_TOKEN}
-            
-            # 4. Publish to CodeArtifact
-            npm publish $TARBALL --registry ${CODEARTIFACT_URL}
-            
-            # 5. Cleanup
-            cd ..
-            rm -rf temp_migration
+            # 2. Download the nupkg file
+            # If your Nexus requires auth, add: -u ${{ secrets.NEXUS_USER }}:${{ secrets.NEXUS_PASS }}
+            curl -L -O "$DOWNLOAD_URL"
+
+            # 3. Push to AWS CodeArtifact
+            # We use the token as the API Key for NuGet authentication
+            dotnet nuget push "${PKG_NAME}.${PKG_VERSION}.nupkg" \
+              --source "${{ env.CODEARTIFACT_URL }}" \
+              --api-key "${{ env.CODEARTIFACT_TOKEN }}" \
+              --skip-duplicate
+
+            # 4. Cleanup
+            rm "${PKG_NAME}.${PKG_VERSION}.nupkg"
           done

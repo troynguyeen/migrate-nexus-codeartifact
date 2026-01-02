@@ -37,21 +37,14 @@ while read_again:
         
         for item in items:
             pkg_name = item.get('name')
-            pkg_group = item.get('group')
+            pkg_repo = item.get('repository')
             
-            # Format the NPM name (handles scoped vs unscoped)
-            # If group exists, it usually maps to @group/name
-            if pkg_group:
-                npm_name = f"@{pkg_group}/{pkg_name}"
-            else:
-                npm_name = pkg_name
 
             # Deduplication logic: Use pkg_name as key to ensure uniqueness
             if pkg_name not in unique_packages:
                 unique_packages[pkg_name] = {
-                    "group": pkg_group,
-                    "name": pkg_name,
-                    "npm": npm_name
+                    "repository": pkg_repo,
+                    "name": pkg_name
                 }
 
         nx_token = results.get('continuationToken')

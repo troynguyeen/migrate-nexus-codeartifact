@@ -1,0 +1,789 @@
+{
+    "packages": [
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.PdfService.Client",
+            "version": "0.1.21"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.DirectionsService.Client",
+            "version": "0.1.9"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.Core",
+            "version": "2.1.4"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.ClientService.Client",
+            "version": "0.1.7"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.IdentityProvider.Client",
+            "version": "1.0.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.Core.Microservice",
+            "version": "2.1.6"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.NotificationService.Client",
+            "version": "1.0.6"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "TIckle.WorkspaceService.Client",
+            "version": "0.1.9"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.WorkspaceService.Client",
+            "version": "0.2.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.LpiService.Client",
+            "version": "1.0.9"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.AuthorizationService.Client",
+            "version": "0.1.3"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.MappingService.Client",
+            "version": "0.1.5"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.BsbNumberService.Client",
+            "version": "0.1.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.FSMService.Client",
+            "version": "0.1.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.AbrService.Client",
+            "version": "0.1.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.DocumentService.Client",
+            "version": "0.1.8"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.SigningService.Client",
+            "version": "0.1.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.TaskService.Client",
+            "version": "0.0.3"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.IntegrationService.Client",
+            "version": "0.0.4"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.InternalOnboardingService.Client",
+            "version": "0.1.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.InternalService.Client",
+            "version": "0.1.4"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.ClientService.Common",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.ClientService.Service",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.ClientService.Application.Service",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.ClientService.Domain.Service",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.TestService.Client",
+            "version": "0.1.6"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.Testing",
+            "version": "4.2.19"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.LRS.NSW.Client",
+            "version": "0.1.2"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.StaffService.Client",
+            "version": "0.1.2"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.LRS.Core",
+            "version": "0.1.2"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.LRS.VIC.Client",
+            "version": "0.2.36"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.Onboarding.Core",
+            "version": "0.0.3"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.DocumentService.FastBuilder.Client",
+            "version": "0.1.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.BillingService.Client",
+            "version": "0.1.2"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.TemplateEngine.Core",
+            "version": "0.0.2"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.MFA.Client",
+            "version": "0.1.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.TemplateEngine.Client",
+            "version": "0.0.13"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.LRS.QLD.Client",
+            "version": "0.4.44"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.LRS.Customer.Core.Client",
+            "version": "0.1.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.LRS.Fees.Core.Client",
+            "version": "0.1.10"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.SettleSmart.Core",
+            "version": "0.1.5"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.SourceAccountService.Client",
+            "version": "0.1.4"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.SRO.Core",
+            "version": "0.1.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.SettleSmart.TestUtils",
+            "version": "0.1.3"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.SRO.QLD.Client",
+            "version": "0.1.5"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "NJsonSchema",
+            "version": "9.13.19"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.BPayService.Client",
+            "version": "0.1.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.SettleSmart.Tracker.Client",
+            "version": "0.1.2"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "OSBSB.Processor.Client",
+            "version": "0.0.3"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.DotNetTools.Cli",
+            "version": "0.1.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.SettleSmart.Dashboard.Client",
+            "version": "0.0.3"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.Features.Client",
+            "version": "0.0.3"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.FeatureCentre.Client",
+            "version": "0.0.10"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.SettleSmart.Worker.Client",
+            "version": "0.1.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "ColdSheep.Core",
+            "version": "0.0.3"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.NotificationService.Client",
+            "version": "0.0.3"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "ColdSheep.Eco.Client",
+            "version": "0.0.2"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "nugetdeploy",
+            "version": "1.0.2"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "ColdSheep.Shepherd",
+            "version": "0.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.WorkspaceMessengerService.Client",
+            "version": "0.1.1-develop"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "OSBSB.Core",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.ClientService.Server",
+            "version": "1.1.97"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.WorkspaceManagement.Client",
+            "version": "0.1.2"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.Core.Caching",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Core",
+            "version": "4.34.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.DomainDriven.Core",
+            "version": "0.0.5"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.Core.Messaging",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Messaging.Contract",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Security",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Caching",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Authentication",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Messaging.Payloads",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Messaging.Infrastructure",
+            "version": "1.0.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Certificates",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Setup",
+            "version": "1.0.2"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Paging",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Http",
+            "version": "1.0.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Application.Validation",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Api",
+            "version": "1.0.2"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Application.Testing",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.ConsoleApp",
+            "version": "1.0.2"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.EntityFramework",
+            "version": "1.0.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Lambda",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Messaging.Contract",
+            "version": "1.0.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Messaging.Infrastructure",
+            "version": "1.0.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Aws",
+            "version": "1.0.3-0002-SecretManager"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Logging",
+            "version": "1.0.0-0002-"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Integration.Management.Client",
+            "version": "0.0.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.FP",
+            "version": "0.1.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "LRS.Core.Abstractions",
+            "version": "0.1.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.LRS.Integration",
+            "version": "0.1.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "SympliSDK",
+            "version": "0.1.1-develop"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.LRS",
+            "version": "0.1.2"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Base",
+            "version": "1.0.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.LRS.Integration.Models",
+            "version": "0.1.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.LRS.Integration.Client",
+            "version": "0.1.2"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Application.Utils",
+            "version": "1.0.2"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.InternalSubscriberManagementService.Client",
+            "version": "0.1.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Http.Extensions",
+            "version": "2.0.2"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "PennyWise.Core",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "OSBSB.Compatibility.Core",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.SRO.NSW.Client",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Broker.Producer",
+            "version": "0.0.2-0002-featuredev"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Broker.Consumer",
+            "version": "0.0.3-0002-featuredev"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.ReportingServiceWorker.Client",
+            "version": "1.0.0-0003-featureWEB-15378"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Interop.Service.Client",
+            "version": "1.0.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.MassTransit",
+            "version": "0.9.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.MassTransit.AspNetCore",
+            "version": "0.11.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.IdGenerator.Client",
+            "version": "0.1.0-0004-master"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Scheduler.Client",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Identity",
+            "version": "5.0.2"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Identity.AspNetCore",
+            "version": "5.0.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.ExceptionHandling",
+            "version": "1.0.1-0002-WEB-13957"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.ExceptionHandling.WCF",
+            "version": "1.0.1-0002-WEB-13957"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.NugetTest",
+            "version": "4.1.211207.31902"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Http.AspNetCore",
+            "version": "3.0.12"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.InternalManagementApi.Client",
+            "version": "0.1.0.9"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.FeatureFlag",
+            "version": "1.0.0.5"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "MassTransit.Abstractions",
+            "version": "0.18.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "MassTransit.AmazonSQS",
+            "version": "0.18.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.SRO.SA.Client",
+            "version": "1.0.0.13"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Bus.Validation.Analysis",
+            "version": "0.1.2-local"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.DutiesVerificationService.Client",
+            "version": "1.0.0.40"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Finance.Reports.Processor.Client",
+            "version": "1.0.0.40"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Reporting.Client",
+            "version": "1.0.0.68"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "LRS.NECDS",
+            "version": "0.0.1.5"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.SearchService.Client",
+            "version": "1.0.0.76"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Aws.Abstractions",
+            "version": "2.1.2.1-local"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "MassTransit",
+            "version": "8.0.13.6-test"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Tools.DependencyManager",
+            "version": "1.2.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.Logging.Payloads",
+            "version": "1.0.0.106"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.BillingOrchestrationService.Client",
+            "version": "1.0.0.110"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.LRS.WA",
+            "version": "1.0.0.370"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.LRS.QLD",
+            "version": "1.0.0.396"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.LRS.SA",
+            "version": "1.0.0.244"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.LRS.NSW",
+            "version": "1.0.0.740"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.LRS.VIC",
+            "version": "1.0.0.310"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.LRS.Shared",
+            "version": "6.0.0.285"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "LRS.Common",
+            "version": "0.0.1.2"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.LRS.Common",
+            "version": "0.0.1.3"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Platform.TestUtils",
+            "version": "1.0.0.223"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.LRS.Documents",
+            "version": "0.0.1.7"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.DataService.Client",
+            "version": "1.0.0.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.DocumentService.Types",
+            "version": "5.0.0.1387"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Loki.Client",
+            "version": "0.2.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.PdfPuppy.Client",
+            "version": "1.0.0.26"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "GitVersioning.Client",
+            "version": "1.0.4"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.WorkspaceService.Types",
+            "version": "7.0.1-WEB-43294.1.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.ClientService.Types",
+            "version": "13.0.3"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.DirectionsService.Types",
+            "version": "5.0.6"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.ClientService.Data",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.LRS.NSW.Authority.Client",
+            "version": "0.2.18"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.LRS.WA.Client",
+            "version": "0.1.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Tickle.Core.Security",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Application.Core",
+            "version": "1.0.0"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.Application.Fp",
+            "version": "0.1.1"
+        },
+        {
+            "repository": "nuget-hosted",
+            "name": "Sympli.DotNetTool",
+            "version": "0.1.0"
+        }
+    ]
+}
