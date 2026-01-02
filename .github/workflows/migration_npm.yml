@@ -12,7 +12,7 @@ env:
 
 jobs:
   terraform:
-    runs-on: sympli-self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
