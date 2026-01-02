@@ -42,7 +42,7 @@ jobs:
           CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token --domain ${{ env.CODEARTIFACT_DOMAIN }} --domain-owner ${{ env.AWS_ACCOUNT_ID }} --query authorizationToken --output text)
           
           # Set the CodeArtifact registry URL
-          CODEARTIFACT_URL=$(aws codeartifact get-repository-endpoint --domain ${{ env.CODEARTIFACT_DOMAIN }} --domain-owner ${{ env.AWS_ACCOUNT_ID }} --repository ${{ env.CODEARTIFACT_REPO }} --format npm)
+          CODEARTIFACT_URL=$(aws codeartifact get-repository-endpoint --domain ${{ env.CODEARTIFACT_DOMAIN }} --domain-owner ${{ env.AWS_ACCOUNT_ID }} --repository ${{ env.CODEARTIFACT_REPO }} --format npm --query repositoryEndpoint --output text)
 
           echo "CODEARTIFACT_TOKEN=$CODEARTIFACT_AUTH_TOKEN"
           echo "CODEARTIFACT_URL=$CODEARTIFACT_URL"
