@@ -7,7 +7,10 @@ on:
 
 env:
   NODE_VERSION: 22
-  NUGET_SOURCE: "https://nexus.sympli.com.au/repository/npm-private/"
+  PYTHON_VERSION: 3.14
+  NEXUS_URL: "https://nexus.sympli.com.au/repository/npm-private/"
+  NEXUS_REPO: "nuget-hosted"
+  JSON_FILE_NAME: "npm_packages.json"
   AWS_REGION: "ap-southeast-1"
   CODEARTIFACT_DOMAIN: "demo-artifact"
   CODEARTIFACT_REPO: "npm-migrated"
@@ -24,6 +27,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
 
       # -------------------------
       # AWS Authentication
@@ -48,6 +56,16 @@ jobs:
           echo "CODEARTIFACT_TOKEN=$CODEARTIFACT_AUTH_TOKEN" >> $GITHUB_ENV
           echo "CODEARTIFACT_URL=$CODEARTIFACT_URL" >> $GITHUB_ENV
 
+      - name: Generate Package List
+        env:
+          NEXUS_URL: ${{ env.NEXUS_URL }}
+          NEXUS_REPO: ${{ env.NEXUS_REPO }}
+          JSON_FILE_NAME: ${{ env.JSON_FILE_NAME }}
+        run: | 
+          python scripts/generate-packages.py
+          ls -la
+          cat ${{ env.JSON_FILE_NAME }}
+
       - name: Migrate Packages
         run: |
           pwd
@@ -65,7 +83,7 @@ jobs:
             
             # 2. Pull from Nexus
             # If Nexus needs auth, add --_auth=$(echo -n 'user:pass' | base64) to your .npmrc or command
-            npm pack $NPM_NAME --registry ${{ env.NUGET_SOURCE }}
+            npm pack $NPM_NAME --registry ${{ env.NEXUS_URL }}
             
             TARBALL=$(ls *.tgz)
             
